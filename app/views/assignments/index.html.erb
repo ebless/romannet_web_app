@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Romannet Web App</title>
+</head>
+<body>
+	<h1>Welcome to this Rails app!</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Class</td>
+				<td>Type</td>
+				<td>Details</td>
+				<td>Due Date</td>
+			</tr>
+		</thead>
+		<% @assignments.each do |assignment| %>
+		<tr>
+			<td><%= assignment.title %></td>
+			<td><%= assignment.assigned_class %></td>
+			<td><%= assignment.assignment_type %></td>
+			<td><%= assignment.details %></td>
+			<td><%= assignment.due_date %></td>
+		</tr>
+		<% end %>
+	</table>
+</body>
+</html>
